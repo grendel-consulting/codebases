@@ -1,7 +1,8 @@
 resource "github_repository" "this" {
-  name       = var.name
-  visibility = "public"
-  auto_init  = false
+  name             = var.name
+  visibility       = "public"
+  license_template = "mit"
+  auto_init        = false
 }
 
 resource "github_branch" "main" {
@@ -14,7 +15,7 @@ resource "github_branch_default" "default" {
   branch     = github_branch.main.branch
 }
 
-resource "github_branch_protection" "example" {
+resource "github_branch_protection" "main" {
   repository_id = github_repository.this.name
   pattern       = github_branch.main.branch
 

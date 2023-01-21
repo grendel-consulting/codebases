@@ -6,6 +6,8 @@ variable "token" {
 
 locals {
   repositories = toset([
-    "codebases"
+    "codebases",
+    "gatsby-baseline",
+    "remix-baseline"
   ])
 }
