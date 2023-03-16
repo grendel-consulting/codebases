@@ -1,6 +1,7 @@
 resource "github_repository" "this" {
   name             = var.name
   visibility       = "public"
+  has_issues       = true
   license_template = "mit"
   auto_init        = false
 }
