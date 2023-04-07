@@ -7,6 +7,12 @@ variable "token" {
 locals {
   repositories = toset([
     "codebases",
+    "cloud-control-tower",
+    "cloud-factory",
+    "cloud-factory-baseline",
+    "cloud-factory-customisations",
+    "cloud-factory-provisioning",
+    "cloud-factory-requests",
     "gatsby-baseline",
     "remix-baseline"
   ])
