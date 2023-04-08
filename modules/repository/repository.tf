@@ -1,9 +1,10 @@
 resource "github_repository" "this" {
-  name             = var.name
-  visibility       = "public"
-  has_issues       = true
-  license_template = "mit"
-  auto_init        = false
+  name                   = var.name
+  visibility             = "public"
+  has_issues             = true
+  delete_branch_on_merge = true
+  license_template       = "mit"
+  auto_init              = false
 }
 
 resource "github_branch" "main" {
