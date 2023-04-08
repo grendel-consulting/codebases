@@ -1,5 +1,7 @@
 resource "github_repository" "this" {
   name                   = var.name
+  description            = var.tagline
+  topics                 = var.topics
   visibility             = "public"
   has_issues             = true
   delete_branch_on_merge = true

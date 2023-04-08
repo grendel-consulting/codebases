@@ -6,5 +6,7 @@ module "repositories" {
     github = github
   }
 
-  name = each.key
+  name    = each.key
+  tagline = lookup(each.value, "tagline", null)
+  topics  = lookup(each.value, "topics", [])
 }
