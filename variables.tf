@@ -6,6 +6,7 @@ variable "token" {
 
 locals {
   repositories = toset([
+    ".github",
     "codebases",
     "cloud-control-tower",
     "cloud-factory",
