@@ -16,5 +16,6 @@ locals {
     "cloud-factory-requests" : { "tagline" : "Requesting AWS Accounts through the Account Factory for Terraform", topics : ["aws", "control-tower", "aft"] },
     "gatsby-baseline" : { "tagline" : "Pre-tooled baseline for Gatsby websites", topics : ["gatsby"] },
     "remix-baseline" : { "tagline" : "Pre-tooled baseline for Remix applications", topics : ["remix"] },
+    "terraform-aws-control_tower_account_factory" : { "tagline" : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
   }
 }
