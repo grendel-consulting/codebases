@@ -1,12 +1,15 @@
 resource "github_repository" "this" {
-  name                   = var.name
-  description            = var.tagline
-  topics                 = var.topics
-  visibility             = "public"
-  has_issues             = true
+  name        = var.name
+  description = var.tagline
+  topics      = var.topics
+  visibility  = "public" #tfsec:ignore:github-repositories-private
+
   delete_branch_on_merge = true
-  license_template       = "mit"
-  auto_init              = false
+  has_issues             = true
+  vulnerability_alerts   = true
+
+  license_template = "mit"
+  auto_init        = false
 }
 
 resource "github_branch" "main" {
