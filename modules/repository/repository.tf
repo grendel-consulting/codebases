@@ -2,7 +2,7 @@ resource "github_repository" "this" {
   name        = var.name
   description = var.tagline
   topics      = var.topics
-  visibility  = "public" #tfsec:ignore:github-repositories-private
+  visibility  = var.visibility #tfsec:ignore:github-repositories-private
 
   delete_branch_on_merge = true
   has_issues             = true
