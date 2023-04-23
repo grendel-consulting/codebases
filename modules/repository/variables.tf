@@ -13,3 +13,9 @@ variable "topics" {
   description = "Topics related to the GitHub repo being created"
   default     = []
 }
+
+variable "visibility" {
+  type        = string
+  description = "Visibility of the GitHub repo being created"
+  default     = "public"
+}
