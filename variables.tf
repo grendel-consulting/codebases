@@ -17,5 +17,6 @@ locals {
     "gatsby-baseline" : { "tagline" : "Pre-tooled baseline for Gatsby websites", topics : ["gatsby"] },
     "remix-baseline" : { "tagline" : "Pre-tooled baseline for Remix applications", topics : ["remix"] },
     "terraform-aws-control_tower_account_factory" : { "tagline" : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
+    "www.grendel-consulting.com" : { "tagline" : "Consulting website for Grendel Consulting", topics : ["gatsby", "cdktf"] }
   }
 }
