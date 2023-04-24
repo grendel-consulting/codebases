@@ -9,4 +9,5 @@ module "repositories" {
   name    = each.key
   tagline = lookup(each.value, "tagline", null)
   topics  = lookup(each.value, "topics", [])
+  pages   = lookup(each.value, "pages", null)
 }
