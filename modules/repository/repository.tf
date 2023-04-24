@@ -8,6 +8,15 @@ resource "github_repository" "this" {
   has_issues             = true
   vulnerability_alerts   = true
 
+  dynamic "pages" {
+    for_each = var.pages == true ? [{}] : []
+    content {
+      source {
+        branch = "gh-pages"
+      }
+    }
+  }
+
   license_template = "mit"
   auto_init        = false
 }
@@ -31,4 +40,10 @@ resource "github_branch_protection" "main" {
   }
 
   require_signed_commits = true
+}
+
+resource "github_branch" "pages" {
+  for_each   = var.pages == true ? { "gh-pages" = "v" } : {}
+  repository = github_repository.this.name
+  branch     = each.key
 }
