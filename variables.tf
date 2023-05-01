@@ -14,6 +14,7 @@ locals {
     "cloud-factory-customisations" : { "tagline" : "Account-specific customisations used in the Account Factory for Terraform", topics : ["aws", "control-tower", "aft"] },
     "cloud-factory-provisioning" : { "tagline" : "Provisioning AWS Accounts through the Account Factory for Terraform", topics : ["aws", "control-tower", "aft"] },
     "cloud-factory-requests" : { "tagline" : "Requesting AWS Accounts through the Account Factory for Terraform", topics : ["aws", "control-tower", "aft"] },
+    "favicon-creator" : { "tagline" : "Generating favicons from SVG and config", topics : ["favicon"] },
     "gatsby-baseline" : { "tagline" : "Pre-tooled baseline for Gatsby websites", topics : ["gatsby"] },
     "grendel-consulting.github.io" : { "tagline" : "Root of GitHub Pages for Grendel Consulting", pages : true },
     "remix-baseline" : { "tagline" : "Pre-tooled baseline for Remix applications", topics : ["remix"] },
