@@ -20,6 +20,12 @@ variable "visibility" {
   default     = "public"
 }
 
+variable "homepage" {
+  type        = string
+  description = "Homepage of the GitHub repo being created"
+  default     = null
+}
+
 variable "pages" {
   type        = bool
   description = "Whether or not to enable GitHub pages"
