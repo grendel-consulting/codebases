@@ -1,8 +1,9 @@
 resource "github_repository" "this" {
-  name        = var.name
-  description = var.tagline
-  topics      = var.topics
-  visibility  = var.visibility #tfsec:ignore:github-repositories-private
+  name         = var.name
+  description  = var.tagline
+  topics       = var.topics
+  visibility   = var.visibility #tfsec:ignore:github-repositories-private
+  homepage_url = var.homepage
 
   delete_branch_on_merge = true
   has_issues             = true
