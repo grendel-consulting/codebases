@@ -1,9 +1,14 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "pre-commit": {
-    "enabled": true
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "config:base", "schedule:nonOfficeHours"
+    ],
+    "pre-commit": {
+      "enabled": true
+    },
+    "timezone": "Europe/London",
+    "vulnerabilityAlerts": {
+      "labels": ["security"],
+      "assignees": ["@ramirezj"]
+    }
   }
-}
