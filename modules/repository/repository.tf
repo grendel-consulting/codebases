@@ -9,6 +9,12 @@ resource "github_repository" "this" {
   has_issues             = true
   vulnerability_alerts   = true
 
+  security_and_analysis {
+    secret_scanning {
+      status = var.visibility == "public" ? "enabled" : "disabled"
+    }
+  }
+
   dynamic "pages" {
     for_each = var.pages == true ? [{}] : []
     content {
