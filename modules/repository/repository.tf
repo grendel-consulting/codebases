@@ -13,6 +13,10 @@ resource "github_repository" "this" {
     secret_scanning {
       status = var.visibility == "public" ? "enabled" : "disabled"
     }
+
+    secret_scanning_push_protection {
+      status = var.visibility == "public" ? "enabled" : "disabled"
+    }
   }
 
   dynamic "pages" {
