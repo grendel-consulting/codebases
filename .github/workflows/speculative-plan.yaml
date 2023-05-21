@@ -7,11 +7,7 @@ on:
 
 jobs:
   tflint:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
@@ -29,7 +25,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.tflint.d/plugins
-          key: ${{ matrix.os }}-tflint-${{ hashFiles('.tflint.hcl') }}
+          key: tflint-${{ hashFiles('.tflint.hcl') }}
 
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v3
@@ -44,14 +40,38 @@ jobs:
       - name: Lint
         run: tflint -f compact
 
+  tfsec:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    env:
+      tfsec_sarif: tfsec.sarif
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2.4.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Run with SARIF Output
+        uses: tfsec/tfsec-sarif-action@main
+        with:
+          sarif_file: ${{ env.tfsec_sarif }}
+
+      - name: Report via GitHub CodeQL
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file:  ${{ env.tfsec_sarif }}
+
   terraform-cloud-speculative-run:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+    needs: [tflint,tfsec]
 
-    needs: [tflint]
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
