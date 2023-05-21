@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run with SARIF Output
-        uses: tfsec/tfsec-sarif-action@main
+        uses: tfsec/tfsec-sarif-action@v0.1.4
         with:
           sarif_file: ${{ env.tfsec_sarif }}
 
