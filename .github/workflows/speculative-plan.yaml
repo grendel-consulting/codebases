@@ -6,13 +6,13 @@ on:
       - main
 
 env:
-  target: [ubuntu-latest]
+  target: ubuntu-latest
 
 jobs:
   tflint:
     strategy:
       matrix:
-        os: env.target
+        os: [env.target]
 
     runs-on: ${{ matrix.os }}
 
@@ -50,7 +50,8 @@ jobs:
   terraform-cloud-speculative-run:
     strategy:
       matrix:
-        os: env.target
+        os: [env.target]
+
     needs: [tflint]
 
     runs-on: ${{ matrix.os }}
