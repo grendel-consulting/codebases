@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -23,6 +26,8 @@ jobs:
 
       - name: Setup Teraform
         uses: hashicorp/setup-terraform@v2
+        with:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Prettify
         run: terraform fmt -check
@@ -97,7 +102,7 @@ jobs:
           sarif_file:  ${{ env.tfsec_sarif }}
 
   terraform-cloud-speculative-run:
-    needs: [tflint,tfsec]
+    needs: [validate,tflint,tfsec]
 
     runs-on: ubuntu-latest
 
@@ -109,7 +114,6 @@ jobs:
     env:
       TF_CLOUD_ORGANIZATION: "grendel-consulting"
       TF_WORKSPACE: "codebases"
-      TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
       CONFIG_DIRECTORY: "./"
 
     steps:
