@@ -5,14 +5,11 @@ on:
     branches:
       - main
 
-env:
-  target: ubuntu-latest
-
 jobs:
   tflint:
     strategy:
       matrix:
-        os: [env.target]
+        os: [ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -50,7 +47,7 @@ jobs:
   terraform-cloud-speculative-run:
     strategy:
       matrix:
-        os: [env.target]
+        os: [ubuntu-latest]
 
     needs: [tflint]
 
