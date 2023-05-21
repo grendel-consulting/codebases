@@ -5,13 +5,17 @@ resource "github_repository" "this" {
   visibility   = var.visibility #tfsec:ignore:github-repositories-private
   homepage_url = var.homepage
 
+  allow_update_branch    = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
 
   security_and_analysis {
-    secret_scanning {
-      status = var.visibility == "public" ? "enabled" : "disabled"
+    dynamic "secret_scanning" {
+      for_each = var.visibility == "public" ? [{}] : []
+      content {
+        status = "enabled"
+      }
     }
 
     secret_scanning_push_protection {
