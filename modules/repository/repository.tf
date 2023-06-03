@@ -10,22 +10,25 @@ resource "github_repository" "this" {
   has_issues             = true
   vulnerability_alerts   = true
 
-  security_and_analysis {
-    dynamic "secret_scanning" {
-      for_each = var.visibility == "public" ? [{}] : []
-      content {
+  dynamic "security_and_analysis" {
+    for_each = var.visibility == "public" ? [{}] : []
+
+    content {
+      secret_scanning {
         status = "enabled"
       }
-    }
 
-    secret_scanning_push_protection {
-      status = var.visibility == "public" ? "enabled" : "disabled"
+      secret_scanning_push_protection {
+        status = "enabled"
+      }
     }
   }
 
   dynamic "pages" {
     for_each = var.pages == true ? [{}] : []
     content {
+      build_type = "legacy"
+
       source {
         branch = "gh-pages"
       }
