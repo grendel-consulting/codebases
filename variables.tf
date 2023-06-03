@@ -21,7 +21,7 @@ locals {
     "remix-baseline" : { tagline : "Pre-tooled baseline for Remix applications", topics : ["remix"] },
     "terraform-aws-cdk_bootstrap" : { tagline : "Refactoring the CDK Bootstrap Cloudformation", topics : ["aws", "cdktf"] },
     "terraform-aws-control_tower_account_factory" : { tagline : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
-    "www.grendel-consulting.com" : { tagline : "Consulting website for Grendel Consulting", topics : ["gatsby", "cdktf"] },
-    "www.onibi.co.uk" : { tagline : "Landing pages for the Onibi imprint" },
+    "www.grendel-consulting.com" : { tagline : "Consulting website for Grendel Consulting", topics : ["gatsby", "cdktf"], homepage : "https://www.grendel-consulting.com" },
+    "www.onibi.co.uk" : { tagline : "Landing pages for the Onibi imprint", homepage : "https://www.onibi.co.uk" },
   }
 }
