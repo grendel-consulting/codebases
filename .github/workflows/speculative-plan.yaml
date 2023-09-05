@@ -24,7 +24,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
-          progress: false
+          show-progress: false
 
       - name: Setup Teraform
         uses: hashicorp/setup-terraform@v2
@@ -56,7 +56,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
-          progress: false
+          show-progress: false
 
       - name: Cache Plugins
         uses: actions/cache@v3
@@ -95,7 +95,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
-          progress: false
+          show-progress: false
 
       - name: Run with SARIF Output
         uses: tfsec/tfsec-sarif-action@v0.1.4
@@ -131,7 +131,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
-          progress: false
+          show-progress: false
 
       - name: Configure Terraform Cloud
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.4
