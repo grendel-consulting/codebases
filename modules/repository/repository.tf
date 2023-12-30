@@ -2,7 +2,7 @@ resource "github_repository" "this" {
   name         = var.name
   description  = var.tagline
   topics       = var.topics
-  visibility   = var.visibility #tfsec:ignore:github-repositories-private
+  visibility   = var.visibility #trivy:ignore:AVD-GIT-0001
   homepage_url = var.homepage
 
   allow_update_branch    = true
