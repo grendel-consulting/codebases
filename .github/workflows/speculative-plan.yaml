@@ -98,8 +98,9 @@ jobs:
           show-progress: false
 
       - name: Run with SARIF Output
-        uses: aquasecurity/trivy-action@v0.16.0
+        uses: aquasecurity/trivy-action@0.16.0
         with:
+          scan-type: "fs"
           format: "sarif"
           output: ${{ env.trivy_sarif }}
 
@@ -109,7 +110,7 @@ jobs:
           sarif_file:  ${{ env.trivy_sarif }}
 
   terraform-cloud-speculative-run:
-    needs: [validate,tflint,tfsec]
+    needs: [validate,tflint,trivy]
 
     runs-on: ubuntu-latest
 
