@@ -100,6 +100,7 @@ jobs:
       - name: Run with SARIF Output
         uses: aquasecurity/trivy-action@0.16.0
         with:
+          scan-type: "fs"
           format: "sarif"
           output: ${{ env.trivy_sarif }}
 
