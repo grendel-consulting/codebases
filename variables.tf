@@ -19,7 +19,7 @@ locals {
     "gatsby-baseline" : { tagline : "Pre-tooled baseline for Gatsby websites", topics : ["gatsby"] },
     "grendel-consulting.github.io" : { tagline : "Root of GitHub Pages for Grendel Consulting", pages : true, homepage : "https://grendel-consulting.github.io" },
     "remix-baseline" : { tagline : "Pre-tooled baseline for Remix applications", topics : ["remix"] },
-    "steampipe-plugin-kolide" : { tagline : "Use SQL to instantly query your Kolide K2 fleet",
+    "steampipe-plugin-kolide" : { tagline : "Use SQL to instantly query your Kolide K2 fleet", discussions : true,
       topics : ["kolide", "postgresql", "postgresql-fdw", "sql", "steampipe", "steampipe-plugin"],
     homepage : "https://hub.steampipe.io/grendel-consulting/steampipe-plugin-kolide" },
     "terraform-aws-cdk_bootstrap" : { tagline : "Refactoring the CDK Bootstrap Cloudformation", topics : ["aws", "cdktf"] },
