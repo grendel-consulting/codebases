@@ -26,6 +26,12 @@ variable "homepage" {
   default     = null
 }
 
+variable "discussions" {
+  type        = bool
+  description = "Whether or not to enable GitHub discussions"
+  default     = false
+}
+
 variable "pages" {
   type        = bool
   description = "Whether or not to enable GitHub pages"

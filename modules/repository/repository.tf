@@ -7,6 +7,7 @@ resource "github_repository" "this" {
 
   allow_update_branch    = true
   delete_branch_on_merge = true
+  has_discussions        = var.discussions
   has_issues             = true
   vulnerability_alerts   = true
 
