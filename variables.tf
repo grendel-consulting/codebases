@@ -21,7 +21,7 @@ locals {
     "remix-baseline" : { tagline : "Pre-tooled baseline for Remix applications", topics : ["remix"] },
     "steampipe-plugin-kolide" : { tagline : "Use SQL to instantly query your Kolide K2 fleet", discussions : true,
       topics : ["kolide", "postgresql", "postgresql-fdw", "sql", "steampipe", "steampipe-plugin"],
-    homepage : "https://hub.steampipe.io/grendel-consulting/steampipe-plugin-kolide" },
+    homepage : "https://hub.steampipe.io/plugins/grendel-consulting/kolide" },
     "terraform-aws-cdk_bootstrap" : { tagline : "Refactoring the CDK Bootstrap Cloudformation", topics : ["aws", "cdktf"] },
     "terraform-aws-control_tower_account_factory" : { tagline : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
     "www.grendel-consulting.com" : { tagline : "Consulting website for Grendel Consulting", topics : ["gatsby", "cdktf"], homepage : "https://www.grendel-consulting.com" },
