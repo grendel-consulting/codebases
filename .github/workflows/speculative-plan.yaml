@@ -79,6 +79,7 @@ jobs:
       security-events: write
 
     env:
+      trivy_sarif: "trivy-results"
 
     steps:
       - name: Harden Runner
