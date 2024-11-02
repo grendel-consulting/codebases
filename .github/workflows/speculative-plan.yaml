@@ -25,6 +25,7 @@ jobs:
             archivist.terraform.io:443
             checkpoint-api.hashicorp.com:443
             github.com:443
+            objects.githubusercontent.com:443
             registry.terraform.io:443
             releases.hashicorp.com:443
 
