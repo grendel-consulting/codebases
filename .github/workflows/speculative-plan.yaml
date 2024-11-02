@@ -5,16 +5,13 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   validate:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: GitHubSecurityLab/actions-permissions/monitor@v1
-
       - name: Harden Runner
         uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
         with:
@@ -44,8 +41,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: GitHubSecurityLab/actions-permissions/monitor@v1
-
       - name: Harden Runner
         uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
         with:
@@ -86,8 +81,6 @@ jobs:
       trivy_sarif: "trivy-results"
 
     steps:
-      - uses: GitHubSecurityLab/actions-permissions/monitor@v1
-
       - name: Harden Runner
         uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
         with:
@@ -130,8 +123,6 @@ jobs:
       CONFIG_DIRECTORY: "./"
 
     steps:
-      - uses: GitHubSecurityLab/actions-permissions/monitor@v1
-
       - name: Harden Runner
         uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
         with:
