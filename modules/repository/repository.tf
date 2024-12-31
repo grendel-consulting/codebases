@@ -4,6 +4,7 @@ resource "github_repository" "this" {
   topics       = var.topics
   visibility   = var.visibility #trivy:ignore:AVD-GIT-0001
   homepage_url = var.homepage
+  archived     = var.archived
 
   allow_update_branch    = true
   delete_branch_on_merge = true

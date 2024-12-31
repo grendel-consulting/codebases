@@ -13,4 +13,5 @@ module "repositories" {
   discussions = lookup(each.value, "discussions", null)
   pages       = lookup(each.value, "pages", null)
   visibility  = lookup(each.value, "visibility", "public")
+  archived    = lookup(each.value, "archived", null)
 }

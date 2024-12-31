@@ -37,3 +37,9 @@ variable "pages" {
   description = "Whether or not to enable GitHub pages"
   default     = false
 }
+
+variable "archived" {
+  type        = bool
+  description = "Whether or not to archive the GitHub repo"
+  default     = false
+}
