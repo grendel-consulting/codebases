@@ -25,6 +25,7 @@ locals {
     homepage : "https://hub.steampipe.io/plugins/grendel-consulting/kolide" },
     "terraform-aws-cdk_bootstrap" : { tagline : "Refactoring the CDK Bootstrap Cloudformation", topics : ["aws", "cdktf"] },
     "terraform-aws-control_tower_account_factory" : { tagline : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
+    "terraform-aws-securely_parked_domain" : { tagline : "Domains with sensible secure-by-default DNS entries with AWS Route 53", topics : ["aws", "route-53", "dns"] },
     "www.grendel-consulting.com" : { tagline : "Consulting website for Grendel Consulting", topics : ["gatsby", "cdktf"], homepage : "https://www.grendel-consulting.com" },
     "www.onibi.co.uk" : { tagline : "Landing pages for the Onibi imprint", homepage : "https://www.onibi.co.uk" },
   }
