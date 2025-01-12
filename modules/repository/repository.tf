@@ -10,7 +10,7 @@ resource "github_repository" "this" {
   delete_branch_on_merge = true
   has_discussions        = var.discussions
   has_issues             = true
-  vulnerability_alerts   = true
+  vulnerability_alerts   = var.archived == true ? false : true
 
   dynamic "security_and_analysis" {
     for_each = var.visibility == "public" ? [{}] : []
@@ -21,7 +21,7 @@ resource "github_repository" "this" {
       }
 
       secret_scanning_push_protection {
-        status = "enabled"
+        status = var.archived == true ? "disabled" : "enabled"
       }
     }
   }
