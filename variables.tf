@@ -20,6 +20,7 @@ locals {
     "gatsby-baseline" : { tagline : "Pre-tooled baseline for Gatsby websites", topics : ["gatsby"], archived : true },
     "grendel-consulting.github.io" : { tagline : "Root of GitHub Pages for Grendel Consulting", pages : true, homepage : "https://grendel-consulting.github.io" },
     "remix-baseline" : { tagline : "Pre-tooled baseline for Remix applications", topics : ["remix"], archived : true },
+    "risen.world" : { tagline : "Experimental strategic and interactive fiction toy", topics : ["sidequest"] },
     "steampipe-plugin-kolide" : { tagline : "Use SQL to instantly query your Kolide K2 fleet", discussions : true,
       topics : ["kolide", "postgresql", "postgresql-fdw", "sql", "steampipe", "steampipe-plugin"],
     homepage : "https://hub.steampipe.io/plugins/grendel-consulting/kolide" },
