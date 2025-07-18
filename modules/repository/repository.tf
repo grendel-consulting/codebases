@@ -30,10 +30,6 @@ resource "github_repository" "this" {
     for_each = var.pages == true ? [{}] : []
     content {
       build_type = "workflow"
-
-      source {
-        branch = "gh-pages"
-      }
     }
   }
 
@@ -60,10 +56,4 @@ resource "github_branch_protection" "main" {
   }
 
   require_signed_commits = true
-}
-
-resource "github_branch" "pages" {
-  for_each   = var.pages == true ? { "gh-pages" = "v" } : {}
-  repository = github_repository.this.name
-  branch     = each.key
 }
