@@ -29,7 +29,7 @@ resource "github_repository" "this" {
   dynamic "pages" {
     for_each = var.pages == true ? [{}] : []
     content {
-      build_type = "legacy"
+      build_type = "workflow"
 
       source {
         branch = "gh-pages"
