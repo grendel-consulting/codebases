@@ -31,7 +31,7 @@ locals {
     "terraform-aws-control_tower_account_factory" : { tagline : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
     "terraform-aws-secure_baseline" : { tagline : "Baseline for AWS Account with security in mind", topics : ["aws", "control-tower"] },
     "terraform-aws-securely_parked_domain" : { tagline : "Domains with sensible secure-by-default DNS entries with AWS Route 53", topics : ["aws", "route-53", "dns"] },
-    "www.grendel-consulting.com" : { tagline : "Consulting website for Grendel Consulting", topics : ["gatsby", "cdktf"], homepage : "https://www.grendel-consulting.com" },
-    "www.onibi.co.uk" : { tagline : "Landing pages for the Onibi imprint", homepage : "https://www.onibi.co.uk" },
+    "www.grendel-consulting.com" : { tagline : "Consulting website for Grendel Consulting", topics : ["astro", "cdktf"], homepage : "https://www.grendel-consulting.com" },
+    "www.onibi.co.uk" : { tagline : "Landing pages for the Onibi imprint", topics : ["astro", "cdktf"], homepage : "https://www.onibi.co.uk" },
   }
 }
