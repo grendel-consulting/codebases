@@ -4,7 +4,7 @@ provider "github" {
 }
 
 terraform {
-  required_version = "1.12.2"
+  required_version = "1.13.0"
 
   cloud {
     organization = "grendel-consulting"
