@@ -26,7 +26,7 @@ locals {
     "risen.world" : { tagline : "Experimental strategic and interactive fiction toy", topics : ["sidequest"] },
     "steampipe-plugin-kolide" : { tagline : "Use SQL to instantly query your Kolide K2 fleet", discussions : true,
       topics : ["kolide", "postgresql", "postgresql-fdw", "sql", "steampipe", "steampipe-plugin"],
-    homepage : "https://hub.steampipe.io/plugins/grendel-consulting/kolide" },
+    homepage : "https://hub.steampipe.io/plugins/grendel-consulting/kolide", archived : true },
     "terraform-aws-cdk_bootstrap" : { tagline : "Refactoring the CDK Bootstrap Cloudformation", topics : ["aws", "cdktf"] },
     "terraform-aws-control_tower_account_factory" : { tagline : "Fork of Account Factory for Terraform from AWS-IA", topics : ["aws", "control-tower", "aft"] },
     "terraform-aws-secure_baseline" : { tagline : "Baseline for AWS Account with security in mind", topics : ["aws", "control-tower"] },
